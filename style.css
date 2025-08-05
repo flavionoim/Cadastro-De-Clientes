@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background-color: dodgerblue;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+form .form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+form input {
+  flex: 1 1 200px;
+  padding: 0.5rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+#btn-salvar, #btn-apagar {
+  background-color: lightseagreen;
+  border-radius: 15px;
+}
+
+#filtro {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+thead {
+  background: #333;
+  color: white;
+}
+
+td, th {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ddd;
+}
+
+#copy {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.btn-editar {
+  background-color: gold;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.btn-remover {
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+
+.btn-editar:hover {
+  background-color: #ffdb4d;
+}
+
+.btn-remover:hover {
+  background-color: #e60000;
+}

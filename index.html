@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Clientes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastro de Clientes</h1>
+    
+    <form id="form-cliente">
+      <div class="form-group">
+        <input type="text" id="i-nome" placeholder="Nome" required />
+        <input type="text" id="i-sobrenome" placeholder="Sobrenome" required />
+        <input type="text" id="i-celular" placeholder="Celular" required />
+      </div>
+      <div class="form-group">
+        <input type="text" id="i-cep" placeholder="CEP" required maxlength="8" />
+        <input type="text" id="i-logradouro" placeholder="Logradouro" readonly />
+        <input type="text" id="i-bairro" placeholder="Bairro" readonly />
+        <input type="text" id="i-cidade" placeholder="Cidade" readonly />
+        <input type="text" id="i-uf" placeholder="UF" readonly />
+        <input type="text" id="i-numero" placeholder="Número" required />
+      </div>
+      <div class="form-actions">
+        <button type="submit" id="btn-salvar">Salvar</button>
+        <button type="reset" id="btn-apagar">Limpar</button>
+      </div>
+    </form>
+
+    <input type="text" id="filtro" placeholder="Filtrar por nome..." />
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nome Completo</th>
+          <th>Celular</th>
+          <th>Endereço</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-clientes-tbody"></tbody>
+    </table>
+  </div>
+  <p id="copy">&copy;FlavioNoim</p>
+  <script src="script.js"></script>
+</body>
+</html>
