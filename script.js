@@ -14,7 +14,6 @@ const iNumero = document.getElementById('i-numero');
 
 let linhaEditando = null;
 
-// LocalStorage helpers
 function getClientesDoStorage() {
   return JSON.parse(localStorage.getItem("clientes")) || [];
 }
@@ -23,7 +22,6 @@ function salvarClientesNoStorage(clientes) {
   localStorage.setItem("clientes", JSON.stringify(clientes));
 }
 
-// CEP lookup
 iCep.addEventListener('blur', async () => {
   const cep = iCep.value.replace(/\D/g, '');
   if (cep.length !== 8) return;
@@ -45,7 +43,6 @@ iCep.addEventListener('blur', async () => {
   }
 });
 
-// Renderização inicial
 function renderTabela(clientes) {
   tbody.innerHTML = '';
 
@@ -64,7 +61,6 @@ function renderTabela(clientes) {
   });
 }
 
-// Filtro
 filtro.addEventListener("input", () => {
   const termo = filtro.value.toLowerCase();
   const clientes = getClientesDoStorage();
@@ -72,7 +68,6 @@ filtro.addEventListener("input", () => {
   renderTabela(filtrados);
 });
 
-// Formulário
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -96,7 +91,6 @@ form.addEventListener("submit", (e) => {
   form.reset();
 });
 
-// Editar
 function editarCliente(index) {
   const cliente = getClientesDoStorage()[index];
   const nome = cliente.nomeCompleto.split(' ');
@@ -115,7 +109,6 @@ function editarCliente(index) {
   linhaEditando = index;
 }
 
-// Remover
 function removerCliente(index) {
   if (confirm("Deseja realmente remover este cliente?")) {
     const clientes = getClientesDoStorage();
@@ -127,7 +120,6 @@ function removerCliente(index) {
   }
 }
 
-// Carregar ao iniciar
 document.addEventListener("DOMContentLoaded", () => {
   renderTabela(getClientesDoStorage());
 });
